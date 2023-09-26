@@ -10,8 +10,8 @@ cd endpoints-quickstart/scripts
 ./query_api.sh JFK
 ./deploy_api.sh ../openapi_with_ratelimit.yaml
 ./deploy_app.sh
-gcloud alpha services api-keys create --display-name="CloudHustlers" 
-KEY_NAME=$(gcloud alpha services api-keys list --format="value(name)" --filter "displayName=CloudHustlers")
+gcloud alpha services api-keys create --display-name="The_Legendary_Flare" 
+KEY_NAME=$(gcloud alpha services api-keys list --format="value(name)" --filter "displayName=The_Legendary_Flare")
 export API_KEY=$(gcloud alpha services api-keys get-key-string $KEY_NAME --format="value(keyString)")
 ./query_api_with_key.sh $API_KEY
 ./generate_traffic_with_key.sh $API_KEY
